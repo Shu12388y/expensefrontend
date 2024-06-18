@@ -8,12 +8,12 @@ import { useState, useEffect } from "react";
 // import { dark } from "@clerk/themes";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("");
   const { isSignedIn } = useAuth();
 
   useEffect(() => {
     if (isSignedIn) {
-      setUser(null);
+      setUser("");
     } else {
       setUser("Sign In");
     }
